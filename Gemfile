@@ -62,6 +62,9 @@ end
 group :production do
   # Use postgresql for deployment on Heroku
   gem 'pg'
+
+  # Fix for heroku asset pipeline
+  gem 'rails_serve_static_assets'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 #gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
