@@ -12,6 +12,7 @@ module FreshAirPlus
     config.load_defaults 5.1
 
     # Get rails to serve static assets
+    # disregard - used the gem 'rails_serve_static_assets'
     # config.serve_static_assets = true
 
     # Settings in config/environments/* take precedence over those specified here.
