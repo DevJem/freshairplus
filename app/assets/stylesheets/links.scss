@@ -1,0 +1,82 @@
+// Place all the styles related to the links controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// This is generic styling for the header and footer
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  position: relative;
+  height: 100%;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  background: lightgray;
+
+}
+
+#page {
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  display: block;
+  padding-bottom: 150px;
+  .container {
+    background: #777777;
+    * {
+      background-color: #f8f9fa;
+    }
+  }
+}
+
+.main {
+  min-height: 100%;
+}
+
+.logo {
+  padding-left: 30px;
+}
+
+#head {
+  height: 140px;
+  margin: 0;
+  .navbar {
+    padding-top: 18px;
+    nav {
+      li {
+        text-align: center;
+      }
+    }
+  }
+  #header-navbar {
+    float: right;
+    padding: 20px 60px 0 0;
+    width: 100%;
+  }
+}
+
+#foot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer{
+  height: 150px;
+  .navbar-nav {
+    flex-direction: column;
+  }
+}
+
+#footer-content {
+  text-align: right;
+}
+
+
+#home {
+  min-height: 100%;
+}
