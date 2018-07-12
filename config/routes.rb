@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root 'links#home'
 
   get 'install' => 'links#install'
-
-
+  get 'faq'     => 'links#faq'
+  get 'testimonials' => 'links#testimonials'
 
 
 

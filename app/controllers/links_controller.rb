@@ -8,4 +8,12 @@ class LinksController < ApplicationController
 
   end
 
+  def faq
+
+  end
+  
+  def testimonials
+
+  end
+
 end
