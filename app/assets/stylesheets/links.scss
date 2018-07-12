@@ -22,7 +22,7 @@ body {
   margin: 0;
   display: block;
   padding-bottom: 150px;
-  background: #ccc;
+  background: image-url("bg.png")
 }
 
 .main {
@@ -42,18 +42,36 @@ body {
 #head {
   height: 200px;
   margin: 0;
+  text-align: center;
+  nav {
+    width: 100%;
+    button {
+      margin-right: 50px;
+    }
+  }
   .navbar {
     padding-top: 78px;
-    nav {
-      li {
-        text-align: center;
-      }
+    li {
+      text-align: center;
     }
   }
   #header-navbar {
+    font-size: 1.4vw;
     float: right;
-    padding: 50px 60px 0 0;
+    padding: 50px 0 0 0;
     width: 100%;
+
+    @media (min-width: 1200px) {
+      font-size: 1.3vw;
+    }
+
+    @media (min-width: 1700px) {
+      font-size: 1.1vw;
+    }
+
+    @media (min-width: 2048px) {
+      font-size: .85vw;
+    }
   }
 }
 
