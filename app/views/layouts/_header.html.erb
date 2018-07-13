@@ -24,17 +24,54 @@
               <li class="nav-item">
                 <%= link_to 'How It Works', '#', class: 'nav-link' %>
               </li>
+              <li class="nav-item dropdown">
+                <%= link_to 'Research', '#', id: 'researchDropdown', class: 'nav-link dropdown-toggle',
+                            role: 'button', data: {toggle: 'dropdown'}, aria: {haspopup: 'true', expanded: 'false'} %>
+
+                <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+                  <li class="dropdown-submenu">
+                    <%= link_to 'Germs emitted into the air:', '#', class: 'dropdown-item dropdown-toggle', data: {toggle: 'hover'} %>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item">Fecal Coliform</li>
+                      <li class="dropdown-item">Hepatitis A</li>
+                      <li class="dropdown-item">Norovirus Virus</li>
+                      <li class="dropdown-item">Salmonella</li>
+                      <li class="dropdown-item">Shigella</li>
+                      <li class="dropdown-item">Other Viruses and Bacteria</li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <%= link_to 'Germs spread to:', '#', class: 'dropdown-item dropdown-toggle' %>
+                    <ul class="dropdown-menu dropdown-menu-adj-left">
+                      <li class="dropdown-item">Counter tops</li>
+                      <li class="dropdown-item">Toothbrushes</li>
+                      <li class="dropdown-item">Towels</li>
+                      <li class="dropdown-item">Water Glasses</li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu">
+                    <%= link_to 'Germs do the following:', '#', class: 'dropdown-item dropdown-toggle' %>
+                    <ul class="dropdown-menu dropdown-menu-adj-top">
+                      <li class="dropdown-item">Linger in the air for up to 2 hours</li>
+                      <li class="dropdown-item">Live for 3 hours or more on hard surfaces</li>
+                      <li class="dropdown-item">Live for days on moist surfaces, towels, and in crevices</li>
+                      <li class="dropdown-item">Travel 6 to 8 feet in the air and may spread over 20 feet away from the toilet</li>
+                      <li class="dropdown-item">Spread to other rooms in the air through open doors</li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
               <li class="nav-item">
                 <%= link_to 'Installation', install_path, class: 'nav-link' %>
               </li>
               <li class="nav-item">
-                <%= link_to 'Research', '#', class: 'nav-link' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'Coming Soon!', '#', class: 'nav-link' %>
+                <%= link_to 'Coming Soon!', '#', class: 'nav-link disabled' %>
               </li>
               <!--<li class="nav-item dropdown">-->
-              <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+              <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
               <!--Dropdown-->
               <!--</a>-->
               <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
@@ -58,3 +95,22 @@
     </div>
   </div>
 </div>
+
+<
+<script type="text/javascript" charset="utf-8">
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+
+
+        return false;
+    });
+</script>

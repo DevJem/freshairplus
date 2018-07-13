@@ -75,6 +75,32 @@ body {
   }
 }
 
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: -90%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
+.dropdown-menu-adj-top {
+  top: 30px !important;
+}
+
+.dropdown-menu-adj-left {
+  left: -50% !important;
+}
+
 /*              *
 *   Footer      *
 *               *
